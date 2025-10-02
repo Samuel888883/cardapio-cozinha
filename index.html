@@ -4,35 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
+  <title>Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <main>
+    <header>
+      <h1>Seja Bem Vindo</h1>
+      <h2>Efetue o seu login</h2>
+    </header>
 
-  <h2>HTML Forms</h2>
+    <form>
+      <figure>
+        <img class="face" src="img/face.png">
+        <img src="img/google.png">
+      </figure>
+      <fieldset>
+        <legend>Email:</legend>
+        <input type="email" id="fname" name="fname"><br><br>
+      </fieldset>
+      <fieldset>
+        <legend>Senha:</legend>
+        <input type="password" id="lname" name="lname"><br><br>
+      </fieldset>
+      <button type="submit" value="entrar">Entrar</button><br>
 
-  <form action="/action_page.php">
-    <h2>fazer login</h2>
-    <fieldset>
-      <legend>email:</legend>
-
-      <input type="email" id="fname" name="fname" placeholder="email"><br><br>
-    </fieldset>
-    <fieldset>
-      <legend>senha
-
-      </legend>
-      <input type="password" id="lname" name="lname" placeholder="senha"><br><br>
-    </fieldset>
-    <input type="submit" value="Enviar"><br><br>
-    <a href="recuperar-senha.html">Esqueceu a senha?</a>
-
-
-    <a href="cadastro.html">Cadastre-se</a>
-
-
-  </form>
+    </form>
+    <div>
+      <a class="desativado" href="recuperar-senha.html">Esqueceu a senha?</a><br><br>
+      <a href="cadastro.html">Cadastre-se</a><br>
+    </div>
+  </main>
 </body>
 
 </html>

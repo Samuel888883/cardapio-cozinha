@@ -1,0 +1,48 @@
+aside{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-color: blue; 
+ color: white;
+ padding: 20px 300px;
+}
+
+footer{
+ background-color: blue;
+ color: white;
+ padding: 20px 300px;
+ font-size: 32px;
+ font-family: 'inika';
+}
+
+.h3{
+ background-color: #2550ff;
+ width: 100%;
+ color: white;
+ font-size: 28px;
+ font-family: 'inika';
+}
+
+.opcao{
+ background-color: white;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ height: 207px;
+ border: 1px solid black;
+ width: 100%;
+}
+
+select{
+ width: 417px;
+ height: 47px;
+ margin: 15px;
+}
+
+textarea{
+ width: 417px;
+ height: 47px;
+ margin: 15px;
+}
+

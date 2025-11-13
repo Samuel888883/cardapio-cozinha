@@ -1,48 +1,272 @@
-aside{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- background-color: blue; 
- color: white;
- padding: 20px 300px;
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: blue;
 }
 
-footer{
- background-color: blue;
- color: white;
- padding: 20px 300px;
- font-size: 32px;
- font-family: 'inika';
+main {
+    display: flex;
+
 }
 
-.h3{
- background-color: #2550ff;
- width: 100%;
- color: white;
- font-size: 28px;
- font-family: 'inika';
+main div {
+    display: flex;
+    flex-direction: column;
 }
 
-.opcao{
- background-color: white;
- display: flex;
- justify-content: space-around;
- align-items: center;
- height: 207px;
- border: 1px solid black;
- width: 100%;
+footer {
+    background-color: white;
 }
 
-select{
- width: 417px;
- height: 47px;
- margin: 15px;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px 10px;
 }
 
-textarea{
- width: 417px;
- height: 47px;
- margin: 15px;
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+    font-size: 96px;
+    font-family: "Inika";
+    font-style: "Inika";
 }
 
+header button {
+    width: 217px;
+    height: 78px;
+    border-radius: 100px;
+    border: 0;
+    background-color: white;
+    color: #2550ff;
+    font-size: 24px;
+    font-style: "Regular";
+    font-family: "Inknut Antiqua";
+}
+
+.conosco {
+    display: flex;
+    flex-direction: column;
+}
+
+.conosco button {
+    width: 100px;
+    height: 55px;
+    border: 1px;
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+    background-color: #2550ff;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: 'inika';
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: 'inika';
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 400px;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+    width: 1250px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+aside {
+    margin-left: 100px;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'inika', sans-serif;
+    font-size: 26px;
+    color: white;
+    border: 2px solid white;
+
+}
+
+aside input,
+aside select,
+aside textarea,
+aside button {
+    background-color: blue;
+    color: white;
+    width: 252px;
+    height: 51px;
+    font-size: 36px;
+    font-family: 'inika';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    padding: 20px 300px;
+    font-size: 32px;
+    font-family: 'inika';
+}
+
+.h3 {
+    background-color: #2550ff;
+    width: 100%;
+    color: white;
+    font-size: 28px;
+    font-family: 'inika';
+}
+
+.opcao {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 207px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+select {
+    width: 417px;
+    height: 47px;
+    margin: 15px;
+}
+
+textarea {
+    width: 417px;
+    height: 85px;
+    margin: 15px;
+}
+
+aside fieldset {
+    border: 0;
+}
+
+aside legend {
+    display: none;
+}
+
+@media(max-width:768px) {
+    body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+    }
+
+    header {
+        width: 100%;
+        height: 150px;
+        background-color: #303aff;
+    }
+
+    header h1 {
+        font-size: 32px;
+
+    }
+
+    header button {
+        width: 50px;
+        height: 28px;
+        color: black;
+        background-color: #43b2ac;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    header div {
+        display: flex;
+        align-self: flex-start;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    aside fieldset {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    aside legend {
+        display: block;
+    }
+    h3{
+         background-color: #43b2ac;
+         font-size: 36px;
+         font-family: 'inters';
+         width: 100%;
+         height: 69px;
+         background-color: #448aff;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+    }
+    h4{
+        color: black;
+
+    }
+    aside fieldset{
+        border:1px solid black;
+        border-radius:10px;
+    }
+    aside legend{
+        display: block;
+        color: black;
+    }
+
+    input::placeholder,textarea::placeholder {
+        color: transparent;
+
+    }
+    input#data, select#turno, textarea#itens, input#bebida {
+        background-color: transparent;
+        border: 0;
+    }
+    form{
+        font-size: 15px;       
+    }
+}

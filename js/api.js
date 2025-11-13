@@ -1,16 +1,8 @@
-const API_USUARIO = "https://api-storage-cantina-main-plum.vercel.app/";
-async function tratarErroResposta(res, msgPadrao) {
+import {getAuthHeaders, tratarErroResponse } from "./utils.js";
 
-    const textoErro = await res.text();
-    let msgErro;
-    try {
-        const errorData = JSON.parse(textoErro);
-        msgErro = errorData.msg || errorData.error || textoErro;
-    } catch {
-        msgErro = textoErro;
-    }
-    return { sucesso: false, msg: msgErro || msgPadrao || "Erro desconhecido na API" };
-}
+const API_USUARIO = "https://api-storage-cantina-main-plum.vercel.app/usuarios";
+const API_CARDAPIO = "https://api-storage-cantina-main-plum.vercel.app/cardapios";
+
 
 async function loginCozinheira(email, senha) {
     try {
@@ -20,7 +12,7 @@ async function loginCozinheira(email, senha) {
             body: JSON.stringify({ email, senha }),
         });
 
-        if (!res.ok) return await tratarErroResposta(res, "Erro ao fa3er Login");
+        if (!res.ok) return await tratarErroResponse(res, "Erro ao fa3er Login");
         const data = await res.json();
 
         if (data.usuario) {
@@ -50,7 +42,7 @@ async function cadastrarCardapio(nome, email, senha) {
             body: JSON.stringify({ nome, email, senha }),
         });
 
-        if (!res.ok) return await tratarErroResposta(res, "Erro ao fa3er Login");
+        if (!res.ok) return await tratarErroResponse(res, "Erro ao fa3er Login");
         const data = await res.json();
         return { sucesso: true, user: data.user || null };
 
@@ -69,7 +61,7 @@ async function recuperarSenha(email) {
             body: JSON.stringify({ email }),
         });
 
-        if (!res.ok) return await tratarErroResposta(res, "Erro ao fa3er Login");
+        if (!res.ok) return await tratarErroResponse(res, "Erro ao fa3er Login");
         const data = await res.json();
         return { sucesso: true, msg: data.msg || "Instruções enviadas para o email" };
 
